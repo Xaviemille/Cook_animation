@@ -17,7 +17,7 @@ class Player(pygame.sprite.Sprite):
         self.frame_index = 0 
         self.update_time = pygame.time.get_ticks()
         for i in range (2):
-            img = pygame.image.load(r'image/{i}.png')
+            img = pygame.image.load(f'image/{i}.png')
             img = pygame.transform.scale(img, (int(img.get_width()* scale), int(img.get_height()* scale)))
             self.animation_list.append(img)
         self.image = self.animation_list[self.frame_index]
